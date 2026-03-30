@@ -1,5 +1,6 @@
 # Stage 1: Build the JAR file using Maven
 FROM maven:3.9.3-eclipse-temurin-17 AS builder
+MAINTAINER Janani
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
