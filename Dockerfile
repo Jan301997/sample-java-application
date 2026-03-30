@@ -8,6 +8,7 @@ RUN mvn clean package -DskipTests
 
 # Stage 2: Runtime image
 FROM eclipse-temurin:17-jdk
+MAINTAINER Janani2
 ENV APP_HOME=/usr/src/app
 WORKDIR $APP_HOME
 COPY --from=builder /app/target/*.jar $APP_HOME/app.jar
